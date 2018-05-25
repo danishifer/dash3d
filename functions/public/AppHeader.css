@@ -1,0 +1,42 @@
+.header-bar {
+    flex: 0;
+    background-color: #1b1c1d;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Reset Icon Baseline */
+.header-bar i.offset {
+    transform: translate(0, -2px);
+}
+
+.header-bar .actions {
+    flex: 0 1 auto;
+  
+    display: flex;
+    align-items: center;
+  
+    margin: 0;
+}
+  
+.header-bar .actions a {
+    margin: 0 8px;
+    cursor: pointer;
+    
+    font-family: 'Lato';
+    color: lightgray;
+}
+
+.header-bar .actions a:hover {
+    color: whitesmoke;
+}
+  
+.header-bar .actions button {
+    margin-left: 8px;
+}
+  
+.header-bar .headerText {
+    flex: 1;
+    margin: 0 8px;
+}

@@ -1,0 +1,84 @@
+*:not(.icon) {
+  font-family: 'Lato'
+}
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contentContainer {
+  /* background-color: #fefefe; */
+  /* flex: 1;
+  display: flex; */
+  margin: min(5%, 24px);
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentContainer.center {
+  flex: 1;
+  display: flex;
+}
+
+#login {
+  display: flex;
+}
+
+.infoSegment {
+  margin: 0 24px 0 8px;
+}
+
+#loginForm {
+  padding: 16px;
+}
+
+#loginForm .extra-inputs {
+  margin-bottom: 16px;
+}
+
+#form {
+  width: 350px;
+  max-width: 90vw;
+}
+
+.extra-inputs .field {
+  width: 100%;
+}
+
+.message-enter {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+}
+
+.message-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 300ms ease-out;
+}
+
+.message-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+
+.message-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+  transition: all 300ms ease-out;
+}
+
+.cardTitle {
+  margin-bottom: 4px;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.ui.card *:not(.icon) {
+  font-family: 'Lato'
+}

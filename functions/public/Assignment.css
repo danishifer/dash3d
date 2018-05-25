@@ -1,0 +1,13 @@
+.infoLabel {
+    margin-bottom: 0
+}
+
+.infoLabel .extra {
+    color: lightgray;
+    font-weight: 400;
+}
+
+ul {
+    margin-top: 4px;
+    padding-left: 24px;
+}

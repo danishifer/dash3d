@@ -1,0 +1,12 @@
+.ui.left.visible.sidebar,
+.ui.right.visible.sidebar {
+    box-shadow: none;
+}
+
+.sidebar .footnotes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 16px;
+    color: gray;
+}
