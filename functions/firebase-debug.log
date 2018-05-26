@@ -1,0 +1,44 @@
+[debug] [2018-05-26T08:31:35.232Z] ----------------------------------------------------------------------
+[debug] [2018-05-26T08:31:35.234Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve --only hosting,functions
+[debug] [2018-05-26T08:31:35.235Z] CLI Version:  3.9.1
+[debug] [2018-05-26T08:31:35.235Z] Platform:     darwin
+[debug] [2018-05-26T08:31:35.235Z] Node Version: v8.9.4
+[debug] [2018-05-26T08:31:35.235Z] Time:         Sat May 26 2018 11:31:35 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:35.235Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-26T08:31:35.248Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-26T08:31:35.248Z] > authorizing via signed-in user
+[debug] [2018-05-26T08:31:35.250Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-26T08:31:35.250Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/-4_uAdkaigk1vmsSgO3OLn55Yqxf4vKpJtiuiGvunP0',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sat May 26 2018 11:31:35 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:35.616Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T08:31:35.634Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/threed-printing-dashboard  
+ Sat May 26 2018 11:31:35 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:36.677Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T08:31:36.678Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/threed-printing-dashboard/tokens  
+ Sat May 26 2018 11:31:36 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:37.421Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/danishifer/Dev/print3d-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate HTTPS functions. Support for other event types coming soon.
+[debug] [2018-05-26T08:31:37.895Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/threed-printing-dashboard  
+ Sat May 26 2018 11:31:37 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:37.895Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/threed-printing-dashboard/apiKeys  
+ Sat May 26 2018 11:31:37 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:37.895Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/threed-printing-dashboard  
+ Sat May 26 2018 11:31:37 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:38.927Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T08:31:38.927Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/959893611225/clients/_:getWebAppConfig  
+ Sat May 26 2018 11:31:38 GMT+0300 (IDT)
+[debug] [2018-05-26T08:31:38.981Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T08:31:39.110Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T08:31:39.541Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[info] ✔  functions: print3d: http://localhost:5003/threed-printing-dashboard/us-central1/print3d

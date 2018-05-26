@@ -103,7 +103,8 @@ var submitAssignment = function submitAssignment(uid, assignmentId, modelId, for
     var data = {
         description: formData.description,
         fileExtension: formData.fileExtension,
-        modelId: modelId
+        modelId: modelId,
+        status: 0
     };
 
     if (formData.isTeam) {
@@ -125,7 +126,6 @@ var submitAssignment = function submitAssignment(uid, assignmentId, modelId, for
 };
 
 var _submitAssignment = function _submitAssignment(uid, assignmentId, data, callback) {
-    console.log(data);
     databaseRef.child('/users').child(uid).child('submissions').child(assignmentId).set(data, function (snap) {
         callback({});
     });
@@ -133,10 +133,8 @@ var _submitAssignment = function _submitAssignment(uid, assignmentId, data, call
 
 var addUser = function addUser(uid, body, callback) {
     var data = body;
-    console.log(data);
     data.dateCreated = (0, _dateformat2.default)(new Date(), "dd mmmm yyyy");
     data.role = 0;
-    console.log(data);
     databaseRef.child('/users').child(uid).set(data, function (snap) {
         _getUsers(function () {
             callback({});

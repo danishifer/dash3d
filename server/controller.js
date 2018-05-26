@@ -80,7 +80,8 @@ const submitAssignment = (uid, assignmentId, modelId, formData, callback) => {
     let data = {
         description: formData.description,
         fileExtension: formData.fileExtension,
-        modelId
+        modelId,
+        status: 0
     }
     
     if (formData.isTeam) {
@@ -104,7 +105,6 @@ const submitAssignment = (uid, assignmentId, modelId, formData, callback) => {
 }
 
 const _submitAssignment = (uid, assignmentId, data, callback) => {
-    console.log(data);
     databaseRef.child('/users').child(uid).child('submissions').child(assignmentId).set(data, snap => {
         callback({});
     })
@@ -112,10 +112,8 @@ const _submitAssignment = (uid, assignmentId, data, callback) => {
 
 const addUser = (uid, body, callback) => {
     let data = body;
-    console.log(data)
     data.dateCreated = dateFormat(new Date(), "dd mmmm yyyy");
     data.role = 0;
-    console.log(data)
     databaseRef.child('/users').child(uid).set(data, snap => {
         _getUsers(() => {
             callback({})

@@ -42,6 +42,7 @@ class Assignment extends Component {
     }
 
     setMoreInfoView = () => {
+        console.log(this.props)
         this.setState({
             description: (
                 <div style={{marginTop: "16px"}}>
@@ -51,13 +52,16 @@ class Assignment extends Component {
                     <h5 className="infoLabel">Model Description</h5>
                     <p>{this.props.modelDescription}</p>
 
-                    <h5 className="infoLabel">Team Participants</h5>
-                    
-                    <p>
-                        {Object.entries(this.props.teamParticipants).map((member, index) => 
-                            <span className="teamParticipant">{member[1]}{Object.entries(this.props.teamParticipants).length > (index + 1) && ", "}</span>
-                        )}
-                    </p>
+                    { this.props.team && this.props.teamParticipants && 
+                        <div>
+                            <h5 className="infoLabel">Team Participants</h5>
+                                <p>
+                                    {Object.entries(this.props.teamParticipants).map((member, index) =>
+                                        <span className="teamParticipant">{member[1]}{Object.entries(this.props.teamParticipants).length > (index + 1) && ", "}</span>
+                                    )}
+                                </p>
+                        </div>
+                    }
 
                     { this.props.fillament && 
                         <div>
@@ -86,17 +90,21 @@ class Assignment extends Component {
     }
 
     setInfoView = () => {
+        console.log(this.props.status === 1 ? "Printing" : "Pending")
         this.setState({
             title: this.props.title,
             meta: (
                 <Card.Meta>
-                    {
-                        this.props.status &&
-                        <span>
-                            <span><Icon name={this.props.status === 1 ? "print": "clock"} /> {this.props.status === 1 ? "Printing" : "Pending"}</span>
-                            <span>&nbsp;&bull;&nbsp;</span>
-                        </span>
-                    }
+                    <span>
+                        {
+                            this.props.status &&
+                            <span>
+                                <Icon name={this.props.status === 1 ? "print" : "clock"} /> {this.props.status === 1 ? "Printing" : "Pending"}
+                                &nbsp;&bull;&nbsp;
+                            </span>
+                        }
+                    </span>
+                    
 
                     <span><Icon name={this.props.team ? "users" : "user"} /> {this.props.team ? "Team" : "Personal"}</span>
                     
@@ -104,7 +112,7 @@ class Assignment extends Component {
                         !this.props.status &&
                         <span>
                             <span>&nbsp;&bull;&nbsp;</span>
-                            <span><Icon name="clock" /> {this.props.due}</span>
+                            <span><Icon name="calendar" /> {this.props.due}</span>
                         </span>
                     }
                     
@@ -208,26 +216,19 @@ class Assignment extends Component {
 
     render() {
         return (
-                
-
-                <Card>
-                    <Dimmer active={this.state.loading}>
-                        <Loader>Loading...</Loader>
-                    </Dimmer>
-                    <Card.Content>
-                        <Card.Header>{this.state.title}</Card.Header>
-                        <Card.Meta>{this.state.meta}</Card.Meta>
-                        <Card.Description>{this.state.description}</Card.Description>
-                    </Card.Content>
-                    <Card.Content extra>
-                    {this.state.extra}
-                    </Card.Content>
-                    
-                </Card>
-            
-            
-                
-            
+            <Card>
+                <Dimmer active={this.state.loading}>
+                    <Loader>Loading...</Loader>
+                </Dimmer>
+                <Card.Content>
+                    <Card.Header>{this.state.title}</Card.Header>
+                    <Card.Meta>{this.state.meta}</Card.Meta>
+                    <Card.Description>{this.state.description}</Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                {this.state.extra}
+                </Card.Content>
+            </Card>
         );
     }
 }

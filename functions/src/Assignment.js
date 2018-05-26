@@ -62,6 +62,7 @@ var Assignment = function (_Component) {
             modelDescription: "",
             loading: false
         }, _this.setMoreInfoView = function () {
+            console.log(_this.props);
             _this.setState({
                 description: _react2.default.createElement(
                     'div',
@@ -86,22 +87,26 @@ var Assignment = function (_Component) {
                         null,
                         _this.props.modelDescription
                     ),
-                    _react2.default.createElement(
-                        'h5',
-                        { className: 'infoLabel' },
-                        'Team Participants'
-                    ),
-                    _react2.default.createElement(
-                        'p',
+                    _this.props.team && _this.props.teamParticipants && _react2.default.createElement(
+                        'div',
                         null,
-                        Object.entries(_this.props.teamParticipants).map(function (member, index) {
-                            return _react2.default.createElement(
-                                'span',
-                                { className: 'teamParticipant' },
-                                member[1],
-                                Object.entries(_this.props.teamParticipants).length > index + 1 && ", "
-                            );
-                        })
+                        _react2.default.createElement(
+                            'h5',
+                            { className: 'infoLabel' },
+                            'Team Participants'
+                        ),
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            Object.entries(_this.props.teamParticipants).map(function (member, index) {
+                                return _react2.default.createElement(
+                                    'span',
+                                    { className: 'teamParticipant' },
+                                    member[1],
+                                    Object.entries(_this.props.teamParticipants).length > index + 1 && ", "
+                                );
+                            })
+                        )
                     ),
                     _this.props.fillament && _react2.default.createElement(
                         'div',
@@ -154,24 +159,21 @@ var Assignment = function (_Component) {
                 )
             });
         }, _this.setInfoView = function () {
+            console.log(_this.props.status === 1 ? "Printing" : "Pending");
             _this.setState({
                 title: _this.props.title,
                 meta: _react2.default.createElement(
                     _semanticUiReact.Card.Meta,
                     null,
-                    _this.props.status && _react2.default.createElement(
+                    _react2.default.createElement(
                         'span',
                         null,
-                        _react2.default.createElement(
+                        _this.props.status && _react2.default.createElement(
                             'span',
                             null,
                             _react2.default.createElement(_semanticUiReact.Icon, { name: _this.props.status === 1 ? "print" : "clock" }),
                             ' ',
-                            _this.props.status === 1 ? "Printing" : "Pending"
-                        ),
-                        _react2.default.createElement(
-                            'span',
-                            null,
+                            _this.props.status === 1 ? "Printing" : "Pending",
                             '\xA0\u2022\xA0'
                         )
                     ),
@@ -193,7 +195,7 @@ var Assignment = function (_Component) {
                         _react2.default.createElement(
                             'span',
                             null,
-                            _react2.default.createElement(_semanticUiReact.Icon, { name: 'clock' }),
+                            _react2.default.createElement(_semanticUiReact.Icon, { name: 'calendar' }),
                             ' ',
                             _this.props.due
                         )
