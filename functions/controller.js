@@ -91,7 +91,7 @@ var getUserForAssignment = function getUserForAssignment(assignmentId, callback)
         var usersList = [];
         Object.entries(users).forEach(function (user) {
             if ((!user[1].submissions || !(assignmentId in user[1].submissions)) && user[1].role < 2) {
-                usersList.push({ value: user[0], text: user[1].name });
+                usersList.push({ value: user[0], text: user[1].firstName + ' ' + user[1].lastName });
             }
         });
 

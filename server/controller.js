@@ -68,7 +68,7 @@ const getUserForAssignment = (assignmentId, callback) => {
         let usersList = [];
         Object.entries(users).forEach(user => {
             if ((!user[1].submissions || !(assignmentId in user[1].submissions)) && user[1].role < 2) {
-                usersList.push({ value: user[0], text: user[1].name })
+                usersList.push({ value: user[0], text: `${user[1].firstName} ${user[1].lastName}` })
             }
         })
 
