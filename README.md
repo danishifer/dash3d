@@ -4,7 +4,7 @@
 
 Rimon Middle School has a 3D printing course and a 3D printer. Students of several classes take the 3D printing course. Teachers give modeling and printing assignments to the students. Students are creating 3D models using their favourite modeling software and export them to a universal STL file for reviewing or for printing. Printing is handled by transferring the STL file to the 3D printer by printer managers.
 
-The objective of the 3D Printing Dashboard is to provide a secured and easy-to-use management tool for teachers, printer managers and students to manage the 3D prints.
+The objective of the 3D Printing Dashboard is to provide a secured and easy-to-use management tool for teachers, printer managers and students to manage the 3D prints.
 
 ## Schedule
 
@@ -18,13 +18,13 @@ In the beggining of each school year teachers should setup the following:
 
    + **Example:** "2017 - 2018", Starting 09/01/2017, Ending 06/20/2018
 
-     ​
+     
 
 2. In the coming year entry, create an entry for each class the will be taking the 3D printing course
 
    + **Example:** "8th Grade - Class 6"
 
-     ​
+     
 
 3. In each class entry, create an entry for each group of students
 
@@ -113,16 +113,15 @@ Once the print ends a printer manager should set that print's state to *Done*.
 
   - Update / delete a print while in *Pending* state
 
-    ​
+    
 
 * Printer Manager
   - Create / update / delete print requests for ad-hoc assignments *(Nice to have)*
 
-  - Update the print queue
+  - Update the print queue
 
   - **All student actions**
 
-    ​
 
 * Teacher
 
