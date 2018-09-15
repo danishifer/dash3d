@@ -211,7 +211,7 @@ Project will be managed in [Gitlab](www.gitlab.com)
 
 ### License
 
-All rights reserved to the developer.
+[Apache2](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 
 
