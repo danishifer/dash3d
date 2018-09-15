@@ -194,12 +194,6 @@ Cloud application. Powered by [Google Firebase](firebase.google.com)
 
 ---
 
-### Source Control
-
-Project will be managed in [Gitlab](www.gitlab.com)
-
----
-
 ### Dev Tools
 
 * [Facebook React](https://reactjs.org)
@@ -213,10 +207,13 @@ Project will be managed in [Gitlab](www.gitlab.com)
 
 [Apache2](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+---
 
+### Developer
 
+Dani Shifer - dani.shifer.school@gmail.com
 
-
+---
 
 ### Additions
 
