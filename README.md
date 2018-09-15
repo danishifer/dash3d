@@ -6,10 +6,6 @@ Rimon Middle School has a 3D printing course and a 3D printer. Students of sever
 
 The objective of the 3D Printing Dashboard is to provide a secured and easy-to-use management tool for teachers, printer managers and students to manage the 3D prints.
 
-## Schedule
-
-MVP - Q2 2018
-
 ## Yearly Setup
 
 In the beggining of each school year teachers should setup the following:
@@ -98,7 +94,7 @@ A print's initial state is *Pending*.
 
 Printer managers monitor the dashboard print queue and the printer status.
 
-Once the printer is free to print, a printer manager can download a pending print's STL file and copy it to the slicing software.
+Once the printer is free to print, a printer manager can download a pending print's STL file and copy it to the slicing software.
 
 The printer manager then enters the print time and the amount of fillament used in the print's adittional info set's the print state to *Printing*.
 
@@ -164,7 +160,7 @@ Once the print ends a printer manager should set that print's state to *Done*.
 
 * User can create a print request
 * User sees list of his prints with their state
-* User sees estimation for the print request's print time *(Nice to have)*
+* User sees estimation for the print request's print time *(Nice to have)*
 
 #### My Account - **Visible to users** *(Nice to have)*
 
