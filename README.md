@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Rimon Middle School has a 3D printing course and a 3D printer. Students of several classes take the 3D printing course. Teachers give modeling and printing assignments to the students. Students are creating 3D models using their favourite modeling software and export them to a universal STL file for reviewing or for printing. Printing is handled by transferring the STL file to the 3D printer by printer managers.
+Students of several classes take the 3D printing course. Teachers give modeling and printing assignments to the students. Students are creating 3D models using their favourite modeling software and export them to a universal STL file for reviewing or for printing. Printing is handled by transferring the STL file to the 3D printer by printer managers.
 
 The objective of the 3D Printing Dashboard is to provide a secured and easy-to-use management tool for teachers, printer managers and students to manage the 3D prints.
 
@@ -198,20 +198,12 @@ Cloud application. Powered by [Google Firebase](firebase.google.com)
 
 * [Facebook React](https://reactjs.org)
 * [Semantic UI React](https://react.semantic-ui.com/)
-* [Github Atom](atom.io)
-* [Adobe Brakcets](https://brackets.io)
 
 ---
 
 ### License
 
 [Apache2](https://www.apache.org/licenses/LICENSE-2.0.html)
-
----
-
-### Developer
-
-Dani Shifer - dani.shifer.school@gmail.com
 
 ---
 
